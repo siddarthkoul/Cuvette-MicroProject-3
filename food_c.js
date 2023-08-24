@@ -400,3 +400,21 @@ function CalorieBelow100(){
     }
   }
 }
+
+
+// List all the food items with highest protien content to lowest
+
+function sortByProtein() {
+  const sortedFood = foodOrginialData.sort((a, b) => b.protiens - a.protiens);
+  sortedFood.forEach(item => {
+    console.log(`${item.foodname}: ${item.protiens}g`);});
+}
+console.log(sortByProtein());
+
+
+function sortByCab() {
+  const sortedCab = foodOrginialData.sort((a, b) => a.cab - b.cab);
+  sortedCab.forEach(item => {
+    console.log(`${item.foodname}: ${item.cab}g`);});
+}
+console.log(sortByCab());
